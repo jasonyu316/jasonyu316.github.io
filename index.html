@@ -237,14 +237,20 @@
 
     /* ─── 新闻动态 ──────────────────────────────── */
     .news-list { display: flex; flex-direction: column; }
+    
+    /* 普通新闻条目（无链接） */
     .news-item {
-      display: flex; gap: 1.5rem; align-items: flex-start;
-      padding: 14px 0;
-      border-bottom: 1px solid var(--border);
+      display: flex; gap: 1.25rem; align-items: flex-start;
+      padding: 14px 16px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: var(--bg-card);
     }
-    .news-item:last-child { border-bottom: none; }
-    .news-date { font-size: 12px; color: var(--ink-3); min-width: 80px; padding-top: 2px; }
-    .news-content { font-size: 14px; line-height: 1.7; }
+    .news-date {
+      font-size: 12px; color: var(--ink-3);
+      min-width: 76px; padding-top: 2px; flex-shrink: 0;
+    }
+    .news-content { font-size: 14px; line-height: 1.75; flex: 1; }
     .news-badge {
       display: inline-block; margin-right: 6px;
       font-size: 11px; padding: 1px 8px;
@@ -252,6 +258,59 @@
       background: var(--teal-50); color: var(--teal-600);
       border: 1px solid var(--teal-100);
       vertical-align: 1px;
+    }
+
+    /* 可点击新闻条目（有详情页链接） */
+    .news-item-link {
+      display: flex; gap: 1.25rem; align-items: flex-start;
+      padding: 14px 16px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      text-decoration: none; color: inherit;
+      transition: box-shadow 0.2s, border-color 0.2s, transform 0.15s;
+      cursor: pointer;
+      position: relative;
+    }
+    .news-item-link:hover {
+      box-shadow: 0 4px 18px rgba(15,110,86,0.10);
+      border-color: var(--teal-100);
+      transform: translateY(-1px);
+      text-decoration: none;
+    }
+    /* 右侧箭头 */
+    .news-item-link::after {
+      content: '→';
+      position: absolute; right: 16px; top: 50%;
+      transform: translateY(-50%);
+      font-size: 14px; color: var(--teal-600);
+      opacity: 0;
+      transition: opacity 0.2s, right 0.2s;
+    }
+    .news-item-link:hover::after { opacity: 1; right: 14px; }
+
+    /* 链接条目里的正文文字颜色 */
+    .news-item-link .news-content {
+      font-size: 14px; line-height: 1.75; flex: 1;
+      padding-right: 20px; /* 给箭头留空间 */
+    }
+    .news-item-link .news-title {
+      color: #0D5C9A;           /* 醒目蓝色，表示可点击 */
+      font-weight: 500;
+      font-size: 14px;
+    }
+    .news-item-link:hover .news-title {
+      color: var(--teal-600);
+      text-decoration: underline;
+    }
+    /* 点击提示小标 */
+    .news-click-hint {
+      display: inline-flex; align-items: center; gap: 3px;
+      font-size: 11px; color: var(--teal-600);
+      background: var(--teal-50); border: 1px solid var(--teal-100);
+      border-radius: 4px; padding: 1px 7px;
+      margin-left: 8px; vertical-align: 1px;
+      font-weight: 400;
     }
 
     /* ─── 联系方式 ──────────────────────────────── */
