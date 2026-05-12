@@ -14,8 +14,8 @@
   <style>
     :root {
       --teal-50:  #E1F5EE;
-      --teal-100: #9FE1CB;
-      --teal-600: #0F6E56;
+      --teal-100: #6994cc;
+      --teal-600: #380f6e;
       --teal-800: #085041;
       --ink:      #1a1a1a;
       --ink-2:    #4a4a4a;
@@ -23,7 +23,7 @@
       --border:   rgba(0,0,0,0.08);
       --bg:       #fafaf8;
       --bg-card:  #ffffff;
-      --radius:   10px;
+      --radius:   12px;
       --serif:    'Noto Serif SC', serif;
       --sans:     'Noto Sans SC', sans-serif;
     }
@@ -34,7 +34,7 @@
       font-family: var(--sans);
       background: var(--bg);
       color: var(--ink);
-      font-size: 15px;
+      font-size: 17px;
       line-height: 1.75;
     }
 
@@ -58,7 +58,7 @@
       font-size: 13px; color: var(--ink-3);
       text-decoration: none;
       display: flex; align-items: center; gap: 5px;
-      padding: 6px 14px; border-radius: 20px;
+      padding: 6px 16px; border-radius: 20px;
       border: 1px solid var(--border);
       background: var(--bg-card);
       transition: all 0.2s;
@@ -85,7 +85,7 @@
     }
     .badge {
       display: inline-block; margin-bottom: 16px;
-      font-size: 11px; padding: 3px 12px;
+      font-size: 13px; padding: 3px 12px;
       border-radius: 20px;
       background: var(--teal-50); color: var(--teal-600);
       border: 1px solid var(--teal-100);
@@ -94,7 +94,7 @@
     .article-title {
       font-family: var(--serif);
       font-size: 28px; font-weight: 600;
-      line-height: 1.45; margin-bottom: 14px;
+      line-height: 1.45; margin-bottom: 16px;
       color: var(--ink);
     }
     .article-meta {
@@ -137,14 +137,14 @@
     /* ── 正文 ── */
     .article-body { padding: 2rem 0; }
     .article-body p {
-      font-size: 15px; color: var(--ink-2);
+      font-size: 17px; color: var(--ink-2);
       line-height: 1.95; margin-bottom: 1.25rem;
     }
     .article-body h2 {
       font-family: var(--serif);
       font-size: 18px; font-weight: 600;
       margin: 2.25rem 0 1rem;
-      padding-left: 14px;
+      padding-left: 16px;
       border-left: 3px solid var(--teal-600);
       color: var(--ink);
     }
@@ -164,10 +164,10 @@
     }
     .congrats-card ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
     .congrats-card li {
-      font-size: 14px; color: var(--ink-2);
+      font-size: 16px; color: var(--ink-2);
       display: flex; align-items: baseline; gap: 10px;
     }
-    .congrats-card li::before { content: '🎓'; font-size: 14px; }
+    .congrats-card li::before { content: '🎓'; font-size: 16px; }
 
     /* 引用/寄语块 */
     .blockquote {
@@ -179,7 +179,7 @@
     }
     .blockquote p {
       font-family: var(--serif);
-      font-size: 15px; color: var(--ink-2);
+      font-size: 17px; color: var(--ink-2);
       line-height: 1.85; margin: 0;
       font-style: italic;
     }
@@ -191,7 +191,7 @@
     /* ── 照片画廊 ── */
     .gallery { margin: 2rem 0; }
     .gallery-label {
-      font-size: 11px; font-weight: 500;
+      font-size: 14px; font-weight: 500;
       letter-spacing: 0.1em; text-transform: uppercase;
       color: var(--teal-600); margin-bottom: 12px;
       display: flex; align-items: center; gap: 10px;
@@ -218,11 +218,11 @@
     .gallery-item:hover img { transform: scale(1.04); }
     .gallery-item .img-overlay {
       position: absolute; inset: 0;
-      background: rgba(15,110,86,0);
+      background: rgba(17,110,86,0);
       display: flex; align-items: center; justify-content: center;
       transition: background 0.3s;
     }
-    .gallery-item:hover .img-overlay { background: rgba(15,110,86,0.15); }
+    .gallery-item:hover .img-overlay { background: rgba(17,110,86,0.17); }
 
     /* 图片占位（没有图片时显示） */
     .img-placeholder {
@@ -322,21 +322,8 @@
 
 
   <!-- ── 封面图 ── -->
-  <div class="cover-wrap fade-up delay-1">
-    <!--
-      ✏️ 有封面照片时：
-         把下面的 cover-placeholder 整块删掉，
-         取消下面 <img> 的注释，修改 src 路径即可。
-
-      <img src="news/defense-2025/cover.jpg" alt="答辩现场全景" />
-    -->
-    <div class="cover-placeholder">
-      <div class="ph-icon">📸</div>
-      <p>将此处替换为封面照片</p>
-      <p style="font-size:11px;">src="news/defense-2025/cover.jpg"</p>
-    </div>
-    <!-- ✏️ 修改图片说明文字 -->
-    <div class="cover-caption">答辩现场 · XX大学生命科学楼第一报告厅 · 2025年5月12日</div>
+  <div class="cover-wrap fade-up delay-1">    
+    <img src="news/defense-2026/fig1.png" alt="答辩现场全景" />
   </div>
 
 
@@ -367,64 +354,23 @@
     </div>
   </div>
 
-  <!-- ── 现场照片画廊 ── -->
   <div class="gallery fade-up delay-3">
     <div class="gallery-label">现场照片</div>
     <div class="gallery-grid">
-
-      <!--
-        ✏️ 有照片时的使用方法：
-           把每个 <div class="img-placeholder">...</div> 替换为：
-           <img src="news/defense-2025/photo1.jpg" alt="说明文字" />
-
-        示例（取消注释即可使用）：
-        <div class="gallery-item" onclick="openLightbox('news/defense-2025/photo1.jpg')">
-          <img src="news/defense-2025/photo1.jpg" alt="答辩现场" />
+        <div class="gallery-item" onclick="openLightbox('news/defense-2026/photo1.jpg')">
+          <img src="news/defense-2026/photo1.jpg" alt="答辩现场" />
           <div class="img-overlay"></div>
         </div>
-      -->
 
       <!-- 照片1 -->
       <div class="gallery-item" onclick="openLightbox(this.querySelector('img') ? this.querySelector('img').src : '')">
-        <div class="img-placeholder">
-          <div class="ph">🖼️</div>
-          <span>photo1.jpg</span>
-        </div>
+      <img src="news/defense-2026/photo2.jpg" alt="答辩现场" />
         <div class="img-overlay"></div>
       </div>
-
-      <!-- 照片2 -->
-      <div class="gallery-item" onclick="openLightbox(this.querySelector('img') ? this.querySelector('img').src : '')">
-        <div class="img-placeholder">
-          <div class="ph">🖼️</div>
-          <span>photo2.jpg</span>
-        </div>
-        <div class="img-overlay"></div>
-      </div>
-
-      <!-- 照片3 -->
-      <div class="gallery-item" onclick="openLightbox(this.querySelector('img') ? this.querySelector('img').src : '')">
-        <div class="img-placeholder">
-          <div class="ph">🖼️</div>
-          <span>photo3.jpg</span>
-        </div>
-        <div class="img-overlay"></div>
-      </div>
-
-      <!-- 照片4 -->
-      <div class="gallery-item" onclick="openLightbox(this.querySelector('img') ? this.querySelector('img').src : '')">
-        <div class="img-placeholder">
-          <div class="ph">🖼️</div>
-          <span>photo4.jpg</span>
-        </div>
-        <div class="img-overlay"></div>
-      </div>
-
-      <!-- ✏️ 如需添加更多照片，复制上方 gallery-item 代码块 -->
-
     </div>
   </div>
 
+  
 
   <!-- ── 底部 ── -->
   <div class="article-footer">
