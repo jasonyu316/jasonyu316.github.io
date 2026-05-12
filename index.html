@@ -17,6 +17,16 @@
   
   <!-- 网站语言 -->
   <meta http-equiv="content-language" content="zh-CN" />
+
+  <!-- ✏️ 微信朋友圈/社交媒体分享预览（Open Graph）
+       og:image 必须填写完整的 https:// 开头的图片地址才能显示封面图
+       建议使用你的个人照片或实验室照片，尺寸 300×300 像素以上 -->
+  <meta property="og:title" content="于捷课题组 | 浙江中医药大学" />
+  <meta property="og:description" content="浙江中医药大学中医临床基础与免疫研究院于捷副研究员课题组，研究方向：风湿免疫病慢性疼痛机制、中药神经药理学、神经系统电生理。" />
+  <meta property="og:image" content="https://yujie316.fun/头像宣传照.jpg" />
+  <meta property="og:url" content="https://yujie316.fun" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="于捷课题组" />
   
   <title>于捷课题组 | 浙江中医药大学中医临床基础与免疫研究院</title>
 
@@ -236,7 +246,7 @@
     .member-card p { font-size: 13px; color: var(--ink-3); }
 
     /* ─── 新闻动态 ──────────────────────────────── */
-    .news-list { display: flex; flex-direction: column; }
+    .news-list { display: flex; flex-direction: column; gap: 10px; }
     
     /* 普通新闻条目（无链接） */
     .news-item {
@@ -247,13 +257,13 @@
       background: var(--bg-card);
     }
     .news-date {
-      font-size: 12px; color: var(--ink-3);
-      min-width: 76px; padding-top: 2px; flex-shrink: 0;
+      font-size: 14px; color: var(--ink-3);
+      min-width: 100px; padding-top: 2px; flex-shrink: 0;
     }
-    .news-content { font-size: 14px; line-height: 1.75; flex: 1; }
+    .news-content { font-size: 15px; line-height: 1.8; flex: 1; }
     .news-badge {
       display: inline-block; margin-right: 6px;
-      font-size: 11px; padding: 1px 8px;
+      font-size: 12px; padding: 2px 10px;
       border-radius: 4px;
       background: var(--teal-50); color: var(--teal-600);
       border: 1px solid var(--teal-100);
@@ -291,13 +301,13 @@
 
     /* 链接条目里的正文文字颜色 */
     .news-item-link .news-content {
-      font-size: 14px; line-height: 1.75; flex: 1;
+      font-size: 15px; line-height: 1.8; flex: 1;
       padding-right: 20px; /* 给箭头留空间 */
     }
     .news-item-link .news-title {
       color: #0D5C9A;           /* 醒目蓝色，表示可点击 */
       font-weight: 500;
-      font-size: 14px;
+      font-size: 15px;
     }
     .news-item-link:hover .news-title {
       color: var(--teal-600);
@@ -385,7 +395,7 @@
       <div class="avatar-wrap">
         <!--<div class="avatar">张</div>
         -->
-        <img src="头像宣传照.jpg" alt="于 捷" style="width:220px;height:220x;border-radius:50%;object-fit:cover;border:2px solid #9FE1CB;" />
+        <img src="头像宣传照.jpg" alt="于 捷" style="width:220px;height:220px;border-radius:50%;object-fit:cover;border:2px solid #9FE1CB;" />
         <!-- 如果有照片，把上面一行替换为：
           <img src="photo.jpg" alt="张伟" style="width:100px;height:100px;border-radius:50%;object-fit:cover;border:2px solid #9FE1CB;" />
         -->
