@@ -62,8 +62,8 @@
       font-family: var(--sans);
       background: var(--bg);
       color: var(--ink);
-      font-size: 18px;
-      line-height: 2;
+      font-size: 20px;
+      line-height: 1.9;
     }
     a { color: var(--teal-600); text-decoration: none; }
     a:hover { text-decoration: underline; }
@@ -75,23 +75,23 @@
       backdrop-filter: blur(10px);
       border-bottom: 2px solid var(--border);
       display: flex; align-items: center; justify-content: space-between;
-      padding: 0 2.5rem; height: 58px;
+      padding: 0 2.5rem; height: 64px;
     }
     .nav-logo {
       font-family: var(--serif);
-      font-size: 22px; font-weight: 800;
+      font-size: 24px; font-weight: 800;
       color: var(--teal-600);
       letter-spacing: 0.02em;
     }
     .nav-links { display: flex; gap: 2rem; list-style: none; }
     .nav-links a {
-      font-size: 16px; color: var(--ink-2);
+      font-size: 18px; color: var(--ink-2);
       transition: color 0.2s;
     }
     .nav-links a:hover { color: var(--teal-600); text-decoration: none; }
 
     /* ─── 布局容器 ──────────────────────────────── */
-    .container { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 2.5rem; }
 
     /* ─── 页面入场动画 ──────────────────────────── */
     @keyframes fadeUp {
@@ -126,24 +126,24 @@
     }
     .hero-text h1 {
       font-family: var(--serif);
-      font-size: 28px; font-weight: 600;
+      font-size: 34px; font-weight: 600;
       margin-bottom: 4px; line-height: 1.3;
     }
     .hero-meta {
-      font-size: 13px; color: var(--ink-3);
+      font-size: 15px; color: var(--ink-3);
       margin-bottom: 14px;
       display: flex; flex-wrap: wrap; gap: 4px 12px;
     }
     .hero-meta span::before { content: '·'; margin-right: 6px; color: var(--teal-100); }
     .hero-meta span:first-child::before { content: ''; margin: 0; }
     .hero-bio {
-      font-size: 14px; color: var(--ink-2);
+      font-size: 16px; color: var(--ink-2);
       line-height: 1.8; max-width: 650px;
       margin-bottom: 16px;
     }
     .tag-list { display: flex; flex-wrap: wrap; gap: 6px; }
     .tag {
-      font-size: 14px; padding: 3px 12px;
+      font-size: 16px; padding: 3px 12px;
       border-radius: 20px;
       background: var(--teal-50);
       color: var(--teal-600);
@@ -157,7 +157,7 @@
     }
     .section:last-of-type { border-bottom: none; }
     .section-label {
-      font-size: 13px; font-weight: 500;
+      font-size: 15px; font-weight: 500;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--teal-600);
@@ -185,14 +185,14 @@
     }
     .r-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.06); }
     .r-card .r-icon {
-      width: 36px; height: 36px; border-radius: 8px;
+      width: 40px; height: 40px; border-radius: 8px;
       background: var(--teal-50);
       display: flex; align-items: center; justify-content: center;
       margin-bottom: 12px;
-      font-size: 18px;
+      font-size: 22px;
     }
-    .r-card h3 { font-size: 16px; font-weight: 500; margin-bottom: 6px; }
-    .r-card p { font-size: 14px; color: var(--ink-3); line-height: 1.7; }
+    .r-card h3 { font-size: 18px; font-weight: 500; margin-bottom: 6px; }
+    .r-card p { font-size: 16px; color: var(--ink-3); line-height: 1.7; }
 
     /* ─── 论文列表 ──────────────────────────────── */
     .pub-list { display: flex; flex-direction: column; gap: 1px; }
@@ -207,16 +207,16 @@
     }
     .pub-item:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.05); }
     .pub-year {
-      font-size: 12px; font-weight: 500;
+      font-size: 14px; font-weight: 500;
       color: var(--teal-600);
       min-width: 36px; padding-top: 2px;
     }
-    .pub-body h4 { font-size: 14px; font-weight: 500; line-height: 1.5; margin-bottom: 4px; }
-    .pub-body .pub-journal { font-size: 12px; color: var(--teal-600); margin-bottom: 2px; }
-    .pub-body .pub-authors { font-size: 12px; color: var(--ink-3); }
+    .pub-body h4 { font-size: 16px; font-weight: 500; line-height: 1.5; margin-bottom: 4px; }
+    .pub-body .pub-journal { font-size: 14px; color: var(--teal-600); margin-bottom: 2px; }
+    .pub-body .pub-authors { font-size: 14px; color: var(--ink-3); }
     .pub-body .pub-link {
       display: inline-block; margin-top: 6px;
-      font-size: 11px; padding: 2px 10px;
+      font-size: 13px; padding: 2px 10px;
       border: 1px solid var(--teal-100);
       border-radius: 20px; color: var(--teal-600);
     }
@@ -225,7 +225,7 @@
     /* ─── 团队成员 ──────────────────────────────── */
     .team-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 12px;
     }
     .member-card {
@@ -238,19 +238,19 @@
     }
     .member-card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.06); }
     .m-avatar {
-      width: 120px; height: 120px; border-radius: 50%;
-      margin: 0 auto 20px;
+      width: 150px; height: 150px; border-radius: 50%;
+      margin: 0 auto 22px;
       display: flex; align-items: center; justify-content: center;
-      font-size: 28px; font-weight: 500;
+      font-size: 34px; font-weight: 500;
       font-family: var(--serif);
     }
-    .member-card h3 { font-size: 13px; font-weight: 500; margin-bottom: 4px; }
-    .member-card p { font-size: 12px; color: var(--ink-3); }
+    .member-card h3 { font-size: 15px; font-weight: 500; margin-bottom: 4px; }
+    .member-card p { font-size: 14px; color: var(--ink-3); }
 
     /* 年级配色图例 */
     .team-legend {
       display: flex; flex-wrap: wrap; gap: 6px 18px;
-      font-size: 13px; color: var(--ink-3);
+      font-size: 15px; color: var(--ink-3);
       margin: -1rem 0 1.25rem;
     }
     .team-legend i {
@@ -271,13 +271,13 @@
       background: var(--bg-card);
     }
     .news-date {
-      font-size: 14px; color: var(--ink-3);
+      font-size: 15px; color: var(--ink-3);
       min-width: 100px; padding-top: 2px; flex-shrink: 0;
     }
-    .news-content { font-size: 15px; line-height: 1.8; flex: 1; }
+    .news-content { font-size: 17px; line-height: 1.8; flex: 1; }
     .news-badge {
       display: inline-block; margin-right: 6px;
-      font-size: 12px; padding: 2px 10px;
+      font-size: 14px; padding: 2px 10px;
       border-radius: 4px;
       background: var(--teal-50); color: var(--teal-600);
       border: 1px solid var(--teal-100);
@@ -315,13 +315,13 @@
 
     /* 链接条目里的正文文字颜色 */
     .news-item-link .news-content {
-      font-size: 15px; line-height: 1.8; flex: 1;
+      font-size: 17px; line-height: 1.8; flex: 1;
       padding-right: 20px; /* 给箭头留空间 */
     }
     .news-item-link .news-title {
       color: #0D5C9A;           /* 醒目蓝色，表示可点击 */
       font-weight: 500;
-      font-size: 15px;
+      font-size: 17px;
     }
     .news-item-link:hover .news-title {
       color: var(--teal-600);
@@ -330,7 +330,7 @@
     /* 点击提示小标 */
     .news-click-hint {
       display: inline-flex; align-items: center; gap: 3px;
-      font-size: 11px; color: var(--teal-600);
+      font-size: 13px; color: var(--teal-600);
       background: var(--teal-50); border: 1px solid var(--teal-100);
       border-radius: 4px; padding: 1px 7px;
       margin-left: 8px; vertical-align: 1px;
@@ -351,19 +351,19 @@
       border-radius: var(--radius);
     }
     .contact-icon {
-      width: 36px; height: 36px; flex-shrink: 0;
+      width: 40px; height: 40px; flex-shrink: 0;
       border-radius: 8px; background: var(--teal-50);
       display: flex; align-items: center; justify-content: center;
-      font-size: 16px; color: var(--teal-600);
+      font-size: 18px; color: var(--teal-600);
     }
-    .contact-label { font-size: 11px; color: var(--ink-3); margin-bottom: 2px; }
-    .contact-value { font-size: 13px; font-weight: 500; }
+    .contact-label { font-size: 13px; color: var(--ink-3); margin-bottom: 2px; }
+    .contact-value { font-size: 15px; font-weight: 500; }
 
     /* ─── 页脚 ──────────────────────────────────── */
     footer {
       padding: 2rem;
       text-align: center;
-      font-size: 12px;
+      font-size: 14px;
       color: var(--ink-3);
       border-top: 1px solid var(--border);
     }
@@ -409,7 +409,7 @@
       <div class="avatar-wrap">
         <!--<div class="avatar">张</div>
         -->
-        <img src="头像宣传照.jpg" alt="于 捷" style="width:220px;height:220px;border-radius:50%;object-fit:cover;border:2px solid #9FE1CB;" />
+        <img src="头像宣传照.jpg" alt="于 捷" style="width:260px;height:260px;border-radius:50%;object-fit:cover;border:2px solid #9FE1CB;" />
         <!-- 如果有照片，把上面一行替换为：
           <img src="photo.jpg" alt="张伟" style="width:100px;height:100px;border-radius:50%;object-fit:cover;border:2px solid #9FE1CB;" />
         -->
@@ -574,7 +574,7 @@
   <img 
     src="team.jpg" 
     alt="团队合照" 
-    style="width: 100%; display: block; object-fit: cover; max-height: 400px;"
+    style="width: 100%; display: block; object-fit: cover; max-height: 460px;"
   />
   <!-- ✏️ 修改图片下方的说明文字，不需要可以删掉这行 -->
   <div style="padding: 10px 14px; font-size: 13px; color: #888; background: #fafaf8;">
@@ -589,7 +589,7 @@
         <img
         src="avatars/于捷.jpg"
         alt="于捷"
-        style="width:120px; height:120px; border-radius:50%; object-fit:cover; margin: 0 auto 20px; display:block; border: 3px solid #9FE1CB;"
+        style="width:150px; height:150px; border-radius:50%; object-fit:cover; margin: 0 auto 22px; display:block; border: 4px solid #9FE1CB;"
         />
         <h3>于捷</h3>
         <p>副研究员 · PI</p>
