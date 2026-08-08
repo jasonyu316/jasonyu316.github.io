@@ -239,10 +239,21 @@
     .member-card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.06); }
     .m-avatar {
       width: 150px; height: 150px; border-radius: 50%;
-      margin: 0 auto 22px;
       display: flex; align-items: center; justify-content: center;
       font-size: 34px; font-weight: 500;
       font-family: var(--serif);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .m-link {
+      display: block;
+      width: fit-content;
+      margin: 0 auto 22px;
+      border-radius: 50%;
+      text-decoration: none;
+    }
+    .m-link:hover .m-avatar {
+      transform: scale(1.06);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
     }
     .member-card h3 { font-size: 15px; font-weight: 500; margin-bottom: 4px; }
     .member-card p { font-size: 14px; color: var(--ink-3); }
@@ -597,62 +608,80 @@
 
       <!-- 博士生 -->
       <div class="member-card fade-up delay-2">
-        <div class="m-avatar" style="background:#EEEDFE; color:#534AB7;">陈</div>
+        <a href="members/陈思佳.html" class="m-link" title="查看陈思佳的简介">
+          <div class="m-avatar" style="background:#EEEDFE; color:#534AB7;">陈</div>
+        </a>
         <h3>陈思佳</h3>
         <p>博士生（二年级）</p>
       </div>
 
       <div class="member-card fade-up delay-2">
-        <div class="m-avatar" style="background:#FAECE7; color:#993C1D;">袁</div>
+        <a href="members/袁存睿.html" class="m-link" title="查看袁存睿的简介">
+          <div class="m-avatar" style="background:#FAECE7; color:#993C1D;">袁</div>
+        </a>
         <h3>袁存睿</h3>
         <p>博士生（一年级）</p>
       </div>
 
       <!-- 硕士生 -->
       <div class="member-card fade-up delay-3">
-        <div class="m-avatar" style="background:#EAF3DE; color:#3B6D11;">祁</div>
+        <a href="members/祁紫含.html" class="m-link" title="查看祁紫含的简介">
+          <div class="m-avatar" style="background:#EAF3DE; color:#3B6D11;">祁</div>
+        </a>
         <h3>祁紫含</h3>
         <p>硕士生（三年级）</p>
       </div>
 
       <!-- 硕士生 -->
       <div class="member-card fade-up delay-3">
-        <div class="m-avatar" style="background:#EAF3DE; color:#3B6D11;">曹</div>
+        <a href="members/曹梦雷.html" class="m-link" title="查看曹梦雷的简介">
+          <div class="m-avatar" style="background:#EAF3DE; color:#3B6D11;">曹</div>
+        </a>
         <h3>曹梦雷</h3>
         <p>硕士生（三年级）</p>
       </div>
 
       <!-- 硕士生 -->
       <div class="member-card fade-up delay-3">
-        <div class="m-avatar" style="background:#EAF3DE; color:#3B6D11;">周</div>
+        <a href="members/周峰.html" class="m-link" title="查看周峰的简介">
+          <div class="m-avatar" style="background:#EAF3DE; color:#3B6D11;">周</div>
+        </a>
         <h3>周峰</h3>
         <p>硕士生（三年级）</p>
       </div>
 
       <!-- 硕士生 -->
       <div class="member-card fade-up delay-3">
-        <div class="m-avatar" style="background:#E6F1FB; color:#185FA5;">张</div>
+        <a href="members/张芳菲.html" class="m-link" title="查看张芳菲的简介">
+          <div class="m-avatar" style="background:#E6F1FB; color:#185FA5;">张</div>
+        </a>
         <h3>张芳菲</h3>
         <p>硕士生（二年级）</p>
       </div>
 
       <!-- 硕士生 -->
       <div class="member-card fade-up delay-3">
-        <div class="m-avatar" style="background:#E6F1FB; color:#185FA5;">张</div>
+        <a href="members/张奕邦.html" class="m-link" title="查看张奕邦的简介">
+          <div class="m-avatar" style="background:#E6F1FB; color:#185FA5;">张</div>
+        </a>
         <h3>张奕邦</h3>
         <p>硕士生（二年级）</p>
       </div>
 
       <!-- 张璐瑶 -->
       <div class="member-card fade-up delay-3">
-        <div class="m-avatar" style="background:#FAEEDA; color:#854F0B;">张</div>
+        <a href="members/张璐瑶.html" class="m-link" title="查看张璐瑶的简介">
+          <div class="m-avatar" style="background:#FAEEDA; color:#854F0B;">张</div>
+        </a>
         <h3>张璐瑶</h3>
         <p>硕士生（一年级）</p>
       </div>
 
       <!-- 闫璐瑶 -->
       <div class="member-card fade-up delay-3">
-        <div class="m-avatar" style="background:#FAEEDA; color:#854F0B;">闫</div>
+        <a href="members/闫璐瑶.html" class="m-link" title="查看闫璐瑶的简介">
+          <div class="m-avatar" style="background:#FAEEDA; color:#854F0B;">闫</div>
+        </a>
         <h3>闫璐瑶</h3>
         <p>硕士生（一年级）</p>
       </div>

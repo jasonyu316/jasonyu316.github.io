@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>陈思佳 | 于捷课题组</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --teal-50:  #E1F5EE;
+      --teal-100: #9fd5e1;
+      --teal-600: #0f4e6e;
+      --ink:      #1a1a1a;
+      --ink-2:    #4a4a4a;
+      --ink-3:    #888;
+      --border:   rgba(0,0,0,0.08);
+      --bg:       #fafaf8;
+      --bg-card:  #ffffff;
+      --radius:   10px;
+      --serif:    'Noto Serif SC', serif;
+      --sans:     'Noto Sans SC', sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--ink);
+      font-size: 18px;
+      line-height: 1.9;
+    }
+    a { color: var(--teal-600); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: 900px; margin: 0 auto; padding: 0 2rem; }
+
+    /* 顶部返回栏 */
+    .topbar {
+      background: rgba(250,250,248,0.92);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 2rem;
+      font-size: 15px;
+    }
+    .topbar-inner { max-width: 900px; margin: 0 auto; }
+
+    /* 个人信息头部 */
+    .profile-head {
+      text-align: center;
+      padding: 3rem 0 1rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .profile-avatar {
+      width: 160px; height: 160px; border-radius: 50%;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 40px; font-weight: 500;
+      font-family: var(--serif);
+      margin-bottom: 18px;
+      border: 3px solid rgba(0,0,0,0.06);
+    }
+    .profile-name {
+      font-family: var(--serif);
+      font-size: 32px; font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .profile-grade {
+      display: inline-block;
+      font-size: 15px;
+      color: var(--teal-600);
+      background: var(--teal-50);
+      border: 1px solid var(--teal-100);
+      border-radius: 20px;
+      padding: 4px 16px;
+    }
+
+    /* 内容区块 */
+    .profile-body { padding: 2rem 0 3rem; }
+    .profile-section { margin-bottom: 2rem; }
+    .section-label {
+      font-size: 14px; font-weight: 600;
+      letter-spacing: 0.12em;
+      color: var(--teal-600);
+      margin-bottom: 12px;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .section-label::after {
+      content: '';
+      flex: 1; height: 1px;
+      background: var(--border);
+    }
+    .placeholder {
+      border: 2px dashed #d8d4c8;
+      border-radius: var(--radius);
+      background: #fffdf8;
+      color: var(--ink-3);
+      font-size: 15px;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    footer {
+      padding: 2rem;
+      text-align: center;
+      font-size: 14px;
+      color: var(--ink-3);
+      border-top: 1px solid var(--border);
+    }
+  </style>
+</head>
+<body>
+
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a href="../index.html#team">← 返回团队成员</a>
+    </div>
+  </div>
+
+  <div class="container">
+    <header class="profile-head">
+      <div class="profile-avatar" style="background:#EEEDFE; color:#534AB7;">陈</div>
+      <h1 class="profile-name">陈思佳</h1>
+      <span class="profile-grade">博士生（二年级）</span>
+    </header>
+
+    <div class="profile-body">
+      <section class="profile-section">
+        <div class="section-label">个人简介</div>
+        <div class="placeholder">简介内容待补充</div>
+      </section>
+
+      <section class="profile-section">
+        <div class="section-label">研究方向</div>
+        <div class="placeholder">研究方向待补充</div>
+      </section>
+
+      <section class="profile-section">
+        <div class="section-label">代表性成果</div>
+        <div class="placeholder">代表性成果待补充</div>
+      </section>
+
+      <section class="profile-section">
+        <div class="section-label">联系方式</div>
+        <div class="placeholder">联系方式待补充</div>
+      </section>
+    </div>
+  </div>
+
+  <footer>
+    陈思佳 · 于捷课题组 · <a href="../index.html">返回主页</a>
+  </footer>
+
+</body>
+</html>
