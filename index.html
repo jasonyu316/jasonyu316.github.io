@@ -247,6 +247,18 @@
     .member-card h3 { font-size: 15px; font-weight: 500; margin-bottom: 3px; }
     .member-card p { font-size: 13px; color: var(--ink-3); }
 
+    /* 年级配色图例 */
+    .team-legend {
+      display: flex; flex-wrap: wrap; gap: 6px 18px;
+      font-size: 13px; color: var(--ink-3);
+      margin: -1rem 0 1.25rem;
+    }
+    .team-legend i {
+      display: inline-block; width: 12px; height: 12px;
+      border-radius: 50%; margin-right: 6px; vertical-align: -1px;
+      border: 1px solid rgba(0,0,0,0.10);
+    }
+
     /* ─── 新闻动态 ──────────────────────────────── */
     .news-list { display: flex; flex-direction: column; gap: 10px; }
     
@@ -548,6 +560,15 @@
   <div class="container">
     <div class="section-label">团队成员</div>
 
+<!-- 年级配色图例：同一个年级使用同一种颜色 -->
+<div class="team-legend">
+  <span><i style="background:#EEEDFE;"></i>博士生（二年级）</span>
+  <span><i style="background:#FAECE7;"></i>博士生（一年级）</span>
+  <span><i style="background:#EAF3DE;"></i>硕士生（三年级）</span>
+  <span><i style="background:#E6F1FB;"></i>硕士生（二年级）</span>
+  <span><i style="background:#FAEEDA;"></i>硕士生（一年级）</span>
+</div>
+
 <!-- 团队合照 -->
 <div style="margin-bottom: 1.5rem; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08);">
   <img 
@@ -596,35 +617,35 @@
 
       <!-- 硕士生 -->
       <div class="member-card fade-up delay-3">
-        <div class="m-avatar" style="background:#EAF3DE; color:#1c1076;">曹</div>
+        <div class="m-avatar" style="background:#EAF3DE; color:#3B6D11;">曹</div>
         <h3>曹梦雷</h3>
         <p>硕士生（三年级）</p>
       </div>
 
       <!-- 硕士生 -->
       <div class="member-card fade-up delay-3">
-        <div class="m-avatar" style="background:#EAF3DE; color:#6d5911;">张</div>
+        <div class="m-avatar" style="background:#E6F1FB; color:#185FA5;">张</div>
         <h3>张芳菲</h3>
         <p>硕士生（二年级）</p>
       </div>
 
       <!-- 硕士生 -->
       <div class="member-card fade-up delay-3">
-        <div class="m-avatar" style="background:#EAF3DE; color:#6d5f11;">张</div>
+        <div class="m-avatar" style="background:#E6F1FB; color:#185FA5;">张</div>
         <h3>张奕邦</h3>
         <p>硕士生（二年级）</p>
       </div>
 
       <!-- 张璐瑶 -->
       <div class="member-card fade-up delay-3">
-        <div class="m-avatar" style="background:#EAF3DE; color:#1c1076;">张</div>
+        <div class="m-avatar" style="background:#FAEEDA; color:#854F0B;">张</div>
         <h3>张璐瑶</h3>
         <p>硕士生（一年级）</p>
       </div>
 
       <!-- 闫璐瑶 -->
       <div class="member-card fade-up delay-3">
-        <div class="m-avatar" style="background:#EAF3DE; color:#1c1076;">张</div>
+        <div class="m-avatar" style="background:#FAEEDA; color:#854F0B;">闫</div>
         <h3>闫璐瑶</h3>
         <p>硕士生（一年级）</p>
       </div>
