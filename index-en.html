@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO basics -->
+  <meta name="description" content="Yu Jie, Associate Researcher at Zhejiang Chinese Medical University, PhD in Pharmacology from Zhejiang University, postdoctoral fellow at the University of Arizona. Research interests include rheumatic immune diseases, chronic pain, neuroelectrophysiology, and patch-clamp techniques." />
+  <meta name="keywords" content="Yu Jie, rheumatic immune disease, chronic pain, Zhejiang Chinese Medical University, basic medicine" />
+  <meta name="author" content="Yu Jie" />
+  <meta name="robots" content="index, follow" />
+  <meta http-equiv="content-language" content="en" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Yu Jie Research Group | Zhejiang Chinese Medical University" />
+  <meta property="og:description" content="Research group of Associate Researcher Yu Jie, Institute of Basic Research in Clinical Medicine and Immunology, Zhejiang Chinese Medical University. Research areas: mechanisms of chronic pain in rheumatic immune diseases, neuropharmacology of Chinese medicine, and neuroelectrophysiology." />
+  <meta property="og:image" content="https://yujie316.fun/头像宣传照.jpg" />
+  <meta property="og:url" content="https://yujie316.fun" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Yu Jie Research Group" />
+
+  <meta name="baidu-site-verification" content="codeva-X4gTPLvRxf" />
+
+  <title>Yu Jie Research Group | Zhejiang Chinese Medical University</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ---------- CSS variables ---------- */
+    :root {
+      --teal-50:  #E1F5EE;
+      --teal-100: #9fd5e1;
+      --teal-600: #0f4e6e;
+      --teal-800: #083d50;
+      --ink:      #1a1a1a;
+      --ink-2:    #4a4a4a;
+      --ink-3:    #888;
+      --border:   rgba(0,0,0,0.08);
+      --bg:       #fafaf8;
+      --bg-card:  #ffffff;
+      --radius:   10px;
+      --serif:    'Noto Serif SC', serif;
+      --sans:     'Noto Sans SC', sans-serif;
+    }
+
+    /* ---------- Global reset ---------- */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--ink);
+      font-size: 20px;
+      line-height: 1.9;
+    }
+    a { color: var(--teal-600); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ---------- Navigation ---------- */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(250,250,248,0.92);
+      backdrop-filter: blur(10px);
+      border-bottom: 2px solid var(--border);
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 2.5rem; height: 64px;
+    }
+    .nav-logo {
+      font-family: var(--serif);
+      font-size: 24px; font-weight: 800;
+      color: var(--teal-600);
+      letter-spacing: 0.02em;
+    }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      font-size: 18px; color: var(--ink-2);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--teal-600); text-decoration: none; }
+
+    /* ---------- Layout container ---------- */
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 2.5rem; }
+
+    /* ---------- Entry animations ---------- */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up { animation: fadeUp 0.6s ease both; }
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.3s; }
+
+    /* ---------- Hero ---------- */
+    #home {
+      padding: 4rem 0 3rem;
+      border-bottom: 2.5px solid var(--border);
+    }
+    .hero-inner {
+      display: flex; gap: 2.5rem; align-items: flex-start;
+    }
+    .avatar-wrap { flex-shrink: 0; }
+    .avatar {
+      width: 100px; height: 100px; border-radius: 50%;
+      background: var(--teal-50);
+      border: 2px solid var(--teal-100);
+      display: flex; align-items: center; justify-content: center;
+      font-family: var(--serif);
+      font-size: 32px; font-weight: 600;
+      color: var(--teal-600);
+    }
+    .hero-text h1 {
+      font-family: var(--serif);
+      font-size: 34px; font-weight: 600;
+      margin-bottom: 4px; line-height: 1.3;
+    }
+    .hero-meta {
+      font-size: 15px; color: var(--ink-3);
+      margin-bottom: 14px;
+      display: flex; flex-wrap: wrap; gap: 4px 12px;
+    }
+    .hero-meta span::before { content: '·'; margin-right: 6px; color: var(--teal-100); }
+    .hero-meta span:first-child::before { content: ''; margin: 0; }
+    .hero-bio {
+      font-size: 16px; color: var(--ink-2);
+      line-height: 1.8; max-width: 650px;
+      margin-bottom: 16px;
+    }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tag {
+      font-size: 16px; padding: 3px 12px;
+      border-radius: 20px;
+      background: var(--teal-50);
+      color: var(--teal-600);
+      border: 1px solid var(--teal-100);
+    }
+
+    /* ---------- Sections ---------- */
+    .section {
+      padding: 3rem 0 2.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .section:last-of-type { border-bottom: none; }
+    .section-label {
+      font-size: 15px; font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--teal-600);
+      margin-bottom: 1.5rem;
+      display: flex; align-items: center; gap: 10px;
+    }
+    .section-label::after {
+      content: '';
+      flex: 1; height: 1px;
+      background: var(--border);
+    }
+
+    /* ---------- Research areas ---------- */
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+      gap: 12px;
+    }
+    .r-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.25rem;
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .r-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.06); }
+    .r-card .r-icon {
+      width: 40px; height: 40px; border-radius: 8px;
+      background: var(--teal-50);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 12px;
+      font-size: 22px;
+    }
+    .r-card h3 { font-size: 18px; font-weight: 500; margin-bottom: 6px; }
+    .r-card p { font-size: 16px; color: var(--ink-3); line-height: 1.7; }
+
+    /* ---------- Publications ---------- */
+    .pub-list { display: flex; flex-direction: column; gap: 1px; }
+    .pub-item {
+      display: flex; gap: 1.25rem; align-items: flex-start;
+      padding: 16px 18px;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      margin-bottom: 8px;
+      transition: box-shadow 0.2s;
+    }
+    .pub-item:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.05); }
+    .pub-year {
+      font-size: 14px; font-weight: 500;
+      color: var(--teal-600);
+      min-width: 36px; padding-top: 2px;
+    }
+    .pub-body h4 { font-size: 16px; font-weight: 500; line-height: 1.5; margin-bottom: 4px; }
+    .pub-body .pub-journal { font-size: 14px; color: var(--teal-600); margin-bottom: 2px; }
+    .pub-body .pub-authors { font-size: 14px; color: var(--ink-3); }
+    .pub-body .pub-link {
+      display: inline-block; margin-top: 6px;
+      font-size: 13px; padding: 2px 10px;
+      border: 1px solid var(--teal-100);
+      border-radius: 20px; color: var(--teal-600);
+    }
+    .pub-body .pub-link:hover { background: var(--teal-50); text-decoration: none; }
+
+    /* ---------- Team members ---------- */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 12px;
+    }
+    .member-card {
+      text-align: center;
+      padding: 1.25rem 1rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition: box-shadow 0.2s;
+    }
+    .member-card:hover { box-shadow: 0 4px 14px rgba(0,0,0,0.06); }
+    .m-avatar {
+      width: 150px; height: 150px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 34px; font-weight: 500;
+      font-family: var(--serif);
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .m-link {
+      display: block;
+      width: fit-content;
+      margin: 0 auto 22px;
+      border-radius: 50%;
+      text-decoration: none;
+    }
+    .m-link:hover .m-avatar {
+      transform: scale(1.06);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    }
+    .member-card h3 { font-size: 15px; font-weight: 500; margin-bottom: 4px; }
+    .member-card p { font-size: 14px; color: var(--ink-3); }
+
+    /* Year color legend */
+    .team-legend {
+      display: flex; flex-wrap: wrap; gap: 6px 18px;
+      font-size: 15px; color: var(--ink-3);
+      margin: -1rem 0 1.25rem;
+    }
+    .team-legend i {
+      display: inline-block; width: 12px; height: 12px;
+      border-radius: 50%; margin-right: 6px; vertical-align: -1px;
+      border: 1px solid rgba(0,0,0,0.10);
+    }
+
+    /* ---------- News ---------- */
+    .news-list { display: flex; flex-direction: column; gap: 10px; }
+    .news-item {
+      display: flex; gap: 1.25rem; align-items: flex-start;
+      padding: 14px 16px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+    }
+    .news-date {
+      font-size: 15px; color: var(--ink-3);
+      min-width: 100px; padding-top: 2px; flex-shrink: 0;
+    }
+    .news-content { font-size: 17px; line-height: 1.8; flex: 1; }
+    .news-badge {
+      display: inline-block; margin-right: 6px;
+      font-size: 14px; padding: 2px 10px;
+      border-radius: 4px;
+      background: var(--teal-50); color: var(--teal-600);
+      border: 1px solid var(--teal-100);
+      vertical-align: 1px;
+    }
+
+    /* Clickable news item */
+    .news-item-link {
+      display: flex; gap: 1.25rem; align-items: flex-start;
+      padding: 14px 16px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      background: var(--bg-card);
+      text-decoration: none; color: inherit;
+      transition: box-shadow 0.2s, border-color 0.2s, transform 0.15s;
+      cursor: pointer;
+      position: relative;
+    }
+    .news-item-link:hover {
+      box-shadow: 0 4px 18px rgba(15,110,86,0.10);
+      border-color: var(--teal-100);
+      transform: translateY(-1px);
+      text-decoration: none;
+    }
+    .news-item-link::after {
+      content: '→';
+      position: absolute; right: 16px; top: 50%;
+      transform: translateY(-50%);
+      font-size: 14px; color: var(--teal-600);
+      opacity: 0;
+      transition: opacity 0.2s, right 0.2s;
+    }
+    .news-item-link:hover::after { opacity: 1; right: 14px; }
+    .news-item-link .news-content {
+      font-size: 17px; line-height: 1.8; flex: 1;
+      padding-right: 20px;
+    }
+    .news-item-link .news-title {
+      color: #0D5C9A;
+      font-weight: 500;
+      font-size: 17px;
+    }
+    .news-item-link:hover .news-title {
+      color: var(--teal-600);
+      text-decoration: underline;
+    }
+    .news-click-hint {
+      display: inline-flex; align-items: center; gap: 3px;
+      font-size: 13px; color: var(--teal-600);
+      background: var(--teal-50); border: 1px solid var(--teal-100);
+      border-radius: 4px; padding: 1px 7px;
+      margin-left: 8px; vertical-align: 1px;
+      font-weight: 400;
+    }
+
+    /* ---------- Contact ---------- */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
+    }
+    .contact-card {
+      display: flex; gap: 12px; align-items: center;
+      padding: 1rem 1.25rem;
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
+    .contact-icon {
+      width: 40px; height: 40px; flex-shrink: 0;
+      border-radius: 8px; background: var(--teal-50);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; color: var(--teal-600);
+    }
+    .contact-label { font-size: 13px; color: var(--ink-3); margin-bottom: 2px; }
+    .contact-value { font-size: 15px; font-weight: 500; }
+
+    /* ---------- Footer ---------- */
+    footer {
+      padding: 2rem;
+      text-align: center;
+      font-size: 14px;
+      color: var(--ink-3);
+      border-top: 1px solid var(--border);
+    }
+
+    /* ---------- Responsive ---------- */
+    @media (max-width: 640px) {
+      nav { padding: 0 1.25rem; }
+      .nav-links { gap: 1rem; }
+      .nav-links li:nth-child(n+4) { display: none; }
+      .container { padding: 0 1.25rem; }
+      .hero-inner { flex-direction: column; gap: 1.25rem; }
+      #home { padding: 2.5rem 0 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">Yu Jie Research Group</div>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#research">Research</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#news">News</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="index.html" style="font-weight:600; color:var(--teal-600);">中文</a></li>
+  </ul>
+</nav>
+
+<section id="home">
+  <div class="container">
+    <div class="hero-inner fade-up">
+
+      <div class="avatar-wrap">
+        <img src="头像宣传照.jpg" alt="Yu Jie" style="width:260px;height:260px;border-radius:50%;object-fit:cover;border:2px solid #9FE1CB;" />
+      </div>
+
+      <div class="hero-text">
+        <h1>Yu Jie</h1>
+
+        <div class="hero-meta">
+          <span>Associate Researcher · Master's Supervisor</span>
+          <span>Institute of Basic Research in Clinical Medicine &amp; Immunology, Zhejiang Chinese Medical University</span>
+          <span>National Key Discipline / Zhejiang Provincial Key Laboratory</span>
+        </div>
+
+        <p class="hero-bio">
+          <strong>Profile</strong>: Postdoctoral fellow in the Department of Pharmacology, University of Arizona.
+          PhD from the College of Pharmaceutical Sciences, Zhejiang University (2015), Zhejiang University Institute of Neuroscience.
+          Selected for the first cohort of the Zhejiang Provincial Higher-Education Leading Talent Training Program (Project 5246)
+          as "High-Level Distinguished Talent"; committee member of the Pharmaceutical and Rehabilitation Professional Committee,
+          Chinese Association of Rehabilitation Medicine; vice chair of the Youth Committee of Immunology,
+          Zhejiang Association of Integrative Medicine; awardee of the ZCMU Project 5151 talent program ("Yuanzhi Youqing").
+          Peer reviewer for <em>Chem Biol Interact</em>, <em>Neurochem Int</em>, and other journals.
+        </p>
+
+        <p class="hero-bio">
+          <strong>Research</strong>: Pathogenesis and neuropharmacology of neuroimmune system disorders such as chronic pain and
+          rheumatoid arthritis, and pharmacological research on Chinese medicine for rheumatic immune diseases. This includes
+          CRMP2-related proteins regulating neuroimmune cells and related pathways, mechanisms of chronic pain in rheumatic
+          immune diseases, neuroimmune mechanisms in central and peripheral sensitization, and related TCM pharmacology.
+          PI of one NSFC General Project, one NSFC Youth Project, and one Zhejiang Provincial Natural Science Foundation project.
+          Author of more than 40 SCI papers, mainly in <em>PAIN</em>,
+          <em>Arthritis Research &amp; Therapy</em>, <em>Communications Biology</em>, <em>Neurobiology of Disease</em>,
+          <em>Molecular Neurobiology</em>, and other leading international journals.
+        </p>
+
+        <div class="tag-list">
+          <span class="tag">Chronic pain in rheumatic immune diseases</span>
+          <span class="tag">Neuropharmacology of Chinese medicine</span>
+          <span class="tag">Neuroelectrophysiology</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="research" class="section">
+  <div class="container">
+    <div class="section-label">Research Areas</div>
+    <div class="research-grid">
+
+      <div class="r-card fade-up delay-1">
+        <div class="r-icon">🔬</div>
+        <h3>Chronic Pain in Rheumatic Immune Diseases</h3>
+        <p>Dissecting the heterogeneity and regulatory networks of immune cells underlying chronic pain in rheumatic immune diseases, and neuro-immune crosstalk mechanisms.</p>
+      </div>
+
+      <div class="r-card fade-up delay-2">
+        <div class="r-icon">🧬</div>
+        <h3>Neuropharmacology of Chinese Medicine</h3>
+        <p>Investigating the targeted mechanisms by which traditional Chinese medicine formulas and compounds regulate chronic pain.</p>
+      </div>
+
+      <div class="r-card fade-up delay-3">
+        <div class="r-icon">💊</div>
+        <h3>Neuroelectrophysiology</h3>
+        <p>Application of patch-clamp electrophysiology to the study of neuro-immune mechanisms.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="publications" class="section">
+  <div class="container">
+    <div class="section-label">Selected Publications</div>
+    <div class="pub-list">
+
+      <div class="pub-item fade-up">
+        <div class="pub-year">2025</div>
+        <div class="pub-body">
+          <h4>CRMP2 phosphorylation regulates polarization and spinalinfiltration of CD4+ T lymphocytes, inhibits spinal glial activation</h4>
+          <div class="pub-journal">PAIN &nbsp;·&nbsp; CAS Q1 (Top)</div>
+          <div class="pub-authors">Yue-Peng Jiang; Jun-Jun Wen; Xiao Ma; Cun-Rui Yuan; Feng Zhou; Meng-Jia Zheng; Xin Tang; Xi-Kang Yu;
+            Wei-Dong Lai; Yi-Han Zhou; Wen-Hua Yu; Wen-Ting You; Yan Jin; Ki Duk Park; Rajesh Khanna; Cheng-Ping Wen; Jie Yu (Corresponding author)</div>
+          <a class="pub-link" href="https://doi.org/10.1097/j.pain.0000000000003599">📄 View Full Text</a>
+        </div>
+      </div>
+
+      <div class="pub-item fade-up">
+        <div class="pub-year">2025</div>
+        <div class="pub-body">
+          <h4>A glutamatergic innervation from medial area of secondary visual cortex to lateral posterior thalamic nucleus facilitates nociceptive and neuropathic pain</h4>
+          <div class="pub-journal">Communications Biology &nbsp;·&nbsp; CAS Q1 (Top)</div>
+          <div class="pub-authors">Bei Tan, Tingting Hu, ... Jie Yu, Yu Du, Zhong Chen (Co-corresponding)</div>
+          <a class="pub-link" href="https://doi.org/10.1038/s42003-025-07874-7">📄 View Full Text</a>
+        </div>
+      </div>
+
+      <div class="pub-item fade-up">
+        <div class="pub-year">2023</div>
+        <div class="pub-body">
+          <h4>Sinomenine ameliorates fibroblast-like synoviocytes dysfunction by promoting phosphorylation and nuclear translocation of CRMP2</h4>
+          <div class="pub-journal">Journal of Ethnopharmacology &nbsp;·&nbsp; CAS Q2 (Top)</div>
+          <div class="pub-authors">Jie Yu, Song Wang, Si-Jia Chen, et al. (First author)</div>
+          <a class="pub-link" href="https://doi.org/10.1016/j.jep.2024.117704">📄 View Full Text</a>
+        </div>
+      </div>
+
+      <div class="pub-item fade-up">
+        <div class="pub-year">2026</div>
+        <div class="pub-body">
+          <h4>Nociplastic pain: the prominent role of non-neuronal cells in central and peripheral sensitization</h4>
+          <div class="pub-journal">Frontiers in Immunology &nbsp;·&nbsp; CAS Q2 (Top)</div>
+          <div class="pub-authors">Weidong Lai, Xin Tang ..., Jie Yu, Chengping Wen (Co-corresponding)</div>
+          <a class="pub-link" href="https://doi.org/10.3389/fimmu.2026.1677310">📄 View Full Text</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="team" class="section">
+  <div class="container">
+    <div class="section-label">Team Members</div>
+
+    <!-- Year color legend: the same color stands for the same year -->
+    <div class="team-legend">
+      <span><i style="background:#EEEDFE;"></i>PhD Candidates (Year 2)</span>
+      <span><i style="background:#FAECE7;"></i>PhD Candidate (Year 1)</span>
+      <span><i style="background:#EAF3DE;"></i>Master's Students (Year 3)</span>
+      <span><i style="background:#E6F1FB;"></i>Master's Students (Year 2)</span>
+      <span><i style="background:#FAEEDA;"></i>Master's Students (Year 1)</span>
+    </div>
+
+    <!-- Team photo -->
+    <div style="margin-bottom: 1.5rem; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08);">
+      <img
+        src="team.jpg"
+        alt="Team photo"
+        style="width: 100%; display: block; height: auto;"
+      />
+      <div style="padding: 10px 14px; font-size: 13px; color: #888; background: #fafaf8;">
+        2026 Team Photo
+      </div>
+    </div>
+
+    <div class="team-grid">
+
+      <!-- PI -->
+      <div class="member-card fade-up">
+        <img
+        src="avatars/于捷.jpg"
+        alt="Yu Jie"
+        style="width:150px; height:150px; border-radius:50%; object-fit:cover; margin: 0 auto 22px; display:block; border: 4px solid #9FE1CB;"
+        />
+        <h3>Yu Jie</h3>
+        <p>Associate Researcher · PI</p>
+      </div>
+
+      <!-- PhD candidates -->
+      <div class="member-card fade-up delay-2">
+        <a href="members/陈思佳.html" class="m-link" title="Profile of 陈思佳">
+          <div class="m-avatar" style="background:#EEEDFE; color:#534AB7;">陈</div>
+        </a>
+        <h3>陈思佳</h3>
+        <p>PhD Candidate · Year 2</p>
+      </div>
+
+      <div class="member-card fade-up delay-2">
+        <a href="members/袁存睿.html" class="m-link" title="Profile of 袁存睿">
+          <div class="m-avatar" style="background:#FAECE7; color:#993C1D;">袁</div>
+        </a>
+        <h3>袁存睿</h3>
+        <p>PhD Candidate · Year 1</p>
+      </div>
+
+      <!-- Master's students -->
+      <div class="member-card fade-up delay-3">
+        <a href="members/祁紫含.html" class="m-link" title="Profile of 祁紫含">
+          <div class="m-avatar" style="background:#EAF3DE; color:#3B6D11;">祁</div>
+        </a>
+        <h3>祁紫含</h3>
+        <p>Master's Student · Year 3</p>
+      </div>
+
+      <div class="member-card fade-up delay-3">
+        <a href="members/曹梦雷.html" class="m-link" title="Profile of 曹梦雷">
+          <div class="m-avatar" style="background:#EAF3DE; color:#3B6D11;">曹</div>
+        </a>
+        <h3>曹梦雷</h3>
+        <p>Master's Student · Year 3</p>
+      </div>
+
+      <div class="member-card fade-up delay-3">
+        <a href="members/周峰.html" class="m-link" title="Profile of 周峰">
+          <div class="m-avatar" style="background:#EAF3DE; color:#3B6D11;">周</div>
+        </a>
+        <h3>周峰</h3>
+        <p>Master's Student · Year 3</p>
+      </div>
+
+      <div class="member-card fade-up delay-3">
+        <a href="members/张芳菲.html" class="m-link" title="Profile of 张芳菲">
+          <div class="m-avatar" style="background:#E6F1FB; color:#185FA5;">张</div>
+        </a>
+        <h3>张芳菲</h3>
+        <p>Master's Student · Year 2</p>
+      </div>
+
+      <div class="member-card fade-up delay-3">
+        <a href="members/张奕邦.html" class="m-link" title="Profile of 张奕邦">
+          <div class="m-avatar" style="background:#E6F1FB; color:#185FA5;">张</div>
+        </a>
+        <h3>张奕邦</h3>
+        <p>Master's Student · Year 2</p>
+      </div>
+
+      <div class="member-card fade-up delay-3">
+        <a href="members/张璐瑶.html" class="m-link" title="Profile of 张璐瑶">
+          <div class="m-avatar" style="background:#FAEEDA; color:#854F0B;">张</div>
+        </a>
+        <h3>张璐瑶</h3>
+        <p>Master's Student · Year 1</p>
+      </div>
+
+      <div class="member-card fade-up delay-3">
+        <a href="members/闫璐瑶.html" class="m-link" title="Profile of 闫璐瑶">
+          <div class="m-avatar" style="background:#FAEEDA; color:#854F0B;">闫</div>
+        </a>
+        <h3>闫璐瑶</h3>
+        <p>Master's Student · Year 1</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="news" class="section">
+  <div class="container">
+    <div class="section-label">News</div>
+    <div class="news-list">
+
+      <a class="news-item-link fade-up" href="news-defense-2026.html">
+        <div class="news-date">May 2026</div>
+        <div class="news-content">
+          <span class="news-badge">Lab News</span>
+          <span class="news-click-hint">📄 Click for details</span><br/>
+          <span class="news-title">2026 Master's Thesis Defense Held Successfully</span>
+        </div>
+      </a>
+
+      <div class="news-item fade-up">
+        <div class="news-date">Mar 2025</div>
+        <div class="news-content">
+          <span class="news-badge">Publication</span>
+          Our lab published a study in <em>PAIN</em> on how CRMP2 regulates T-lymphocyte-induced central sensitization, attracting wide attention both at home and abroad.
+        </div>
+      </div>
+
+      <div class="news-item fade-up">
+        <div class="news-date">Mar 2026</div>
+        <div class="news-content">
+          <span class="news-badge" style="background:#E6F1FB;color:#185FA5;border-color:#B5D4F4;">Grant Awarded</span>
+        </div>
+      </div>
+
+      <div class="news-item fade-up">
+        <div class="news-date">Apr 2026 – Ongoing</div>
+        <div class="news-content">
+          <span class="news-badge" style="background:#FAEEDA;color:#854F0B;border-color:#FAC775;">Admissions</span>
+          Our lab collaborates with Prof. Rajesh Khanna (University of Florida) and Prof. Aubin Moutal (Saint Louis University).
+          We are recruiting <strong>2 master's students</strong> for Fall 2026. Students interested in the mechanisms of chronic pain in rheumatic immune diseases are welcome to contact us!
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="section">
+  <div class="container">
+    <div class="section-label">Contact Us</div>
+    <div class="contact-grid">
+
+      <div class="contact-card fade-up">
+        <div class="contact-icon">📧</div>
+        <div>
+          <div class="contact-label">Email</div>
+          <div class="contact-value">
+            <a href="mailto:yujie@zcmu.edu.cn">yujie@zcmu.edu.cn</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-card fade-up delay-1">
+        <div class="contact-icon">📍</div>
+        <div>
+          <div class="contact-label">Lab Address</div>
+          <div class="contact-value">Binwen Campus, Building 20, Room 20209</div>
+        </div>
+      </div>
+
+      <div class="contact-card fade-up delay-2">
+        <div class="contact-icon">📞</div>
+        <div>
+          <div class="contact-label">Office Phone</div>
+          <div class="contact-value">010-1234-5678</div>
+        </div>
+      </div>
+
+      <div class="contact-card fade-up delay-3">
+        <div class="contact-icon">🏫</div>
+        <div>
+          <div class="contact-label">Postal Address</div>
+          <div class="contact-value">No. 548 Binwen Road, Binjiang District, Hangzhou, Zhejiang 310058</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2025 Yu Jie Research Group &nbsp;·&nbsp; Institute of Basic Research in Clinical Medicine &amp; Immunology, Zhejiang Chinese Medical University &nbsp;·&nbsp; All rights reserved
+</footer>
+
+</body>
+</html>
