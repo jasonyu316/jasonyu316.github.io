@@ -60,6 +60,7 @@
       margin-bottom: 18px;
       border: 3px solid rgba(0,0,0,0.06);
     }
+    .profile-avatar--photo { object-fit: cover; border-color: var(--teal-100); }
     .profile-name {
       font-family: var(--serif);
       font-size: 32px; font-weight: 600;
@@ -99,6 +100,15 @@
       padding: 2rem;
       text-align: center;
     }
+    .profile-photo {
+      display: block;
+      width: 100%;
+      max-width: 620px;
+      height: auto;
+      margin: 0 auto;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+    }
 
     footer {
       padding: 2rem;
@@ -119,12 +129,17 @@
 
   <div class="container">
     <header class="profile-head">
-      <div class="profile-avatar" style="background:#FAEEDA; color:#854F0B;">闫</div>
+      <img class="profile-avatar profile-avatar--photo" src="../avatars/闫璐瑶.jpg" alt="闫璐瑶头像" />
       <h1 class="profile-name">闫璐瑶</h1>
       <span class="profile-grade">硕士生（一年级）</span>
     </header>
 
     <div class="profile-body">
+      <section class="profile-section">
+        <div class="section-label">个人照片</div>
+        <img class="profile-photo" src="闫璐瑶.jpg" alt="闫璐瑶" loading="lazy" />
+      </section>
+
       <section class="profile-section">
         <div class="section-label">个人简介</div>
         <div class="placeholder">简介内容待补充</div>
