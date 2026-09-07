@@ -176,6 +176,18 @@
       color: var(--teal-600);
       border: 1px solid var(--teal-100);
     }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .hero-action {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 38px; padding: 0 16px; border-radius: 20px;
+      border: 1px solid var(--teal-100); font-size: 14px; font-weight: 500;
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+    }
+    .hero-action:hover { text-decoration: none; transform: translateY(-1px); }
+    .hero-action--primary { background: var(--teal-600); border-color: var(--teal-600); color: #fff; }
+    .hero-action--primary:hover { background: var(--teal-800); color: #fff; }
+    .hero-action--secondary { background: var(--bg-card); color: var(--teal-600); }
+    .hero-action--secondary:hover { background: var(--teal-50); }
 
     /* ─── 通用 section ─────────────────────────── */
     .section {
@@ -212,12 +224,12 @@
     }
     .r-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.06); }
     .r-card .r-icon {
-      width: 40px; height: 40px; border-radius: 8px;
+      width: 56px; height: 56px; border-radius: 12px;
       background: var(--teal-50);
       display: flex; align-items: center; justify-content: center;
       margin-bottom: 12px;
-      font-size: 20px;
     }
+    .r-card .r-icon img { width: 34px; height: 34px; }
     .r-card h3 { font-size: 16px; font-weight: 500; margin-bottom: 6px; }
     .r-card p { font-size: 14px; color: var(--ink-3); line-height: 1.7; }
 
@@ -255,6 +267,15 @@
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 12px;
     }
+    .team-subheading {
+      grid-column: 1 / -1;
+      margin-top: 1.25rem;
+      color: var(--teal-600);
+      font-size: 15px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+    }
+    .team-subheading:first-child { margin-top: 0; }
     .member-card {
       text-align: center;
       padding: 1.25rem 1rem;
@@ -487,7 +508,11 @@
         <div class="tag-list">
           <span class="tag">风湿免疫病慢性疼痛机制</span>
           <span class="tag">中药神经药理学</span>
-          <span class="tag">神经系统电生理</span>        
+          <span class="tag">神经系统电生理</span>
+        </div>
+        <div class="hero-actions">
+          <a class="hero-action hero-action--primary" href="#news">加入课题组</a>
+          <a class="hero-action hero-action--secondary" href="mailto:yujie@zcmu.edu.cn">联系课题组</a>
         </div>
       </div>
 
@@ -507,21 +532,21 @@
 
       <!-- 方向1 -->
       <div class="r-card fade-up delay-1">
-        <div class="r-icon">🔬</div>
+        <div class="r-icon"><img src="assets/icons/brain.svg" alt="" aria-hidden="true" /></div>
         <h3>风湿免疫病慢性疼痛机制</h3>
         <p>解析风湿免疫病慢性疼痛形成过程免疫细胞的异质性及其调控网络，神经免疫交互机制。</p>
       </div>
 
       <!-- 方向2 -->
       <div class="r-card fade-up delay-2">
-        <div class="r-icon">🧬</div>
+        <div class="r-icon"><img src="assets/icons/leaf.svg" alt="" aria-hidden="true" /></div>
         <h3>中药神经药理学</h3>
         <p>开发研究传统中药经方及单体调控慢性疼痛的靶点机制。</p>
       </div>
 
       <!-- 方向3 -->
       <div class="r-card fade-up delay-3">
-        <div class="r-icon">💊</div>
+        <div class="r-icon"><img src="assets/icons/activity.svg" alt="" aria-hidden="true" /></div>
         <h3>神经系统电生理</h3>
         <p>膜片钳电生理在神经免疫机制研究中的应用。</p>
       </div>        
@@ -616,15 +641,6 @@
   <div class="container">
     <div class="section-label">团队成员</div>
 
-<!-- 年级配色图例：同一个年级使用同一种颜色 -->
-<div class="team-legend">
-  <span><i style="background:#EEEDFE;"></i>博士生（二年级）</span>
-  <span><i style="background:#FAECE7;"></i>博士生（一年级）</span>
-  <span><i style="background:#EAF3DE;"></i>硕士生（三年级）</span>
-  <span><i style="background:#E6F1FB;"></i>硕士生（二年级）</span>
-  <span><i style="background:#FAEEDA;"></i>硕士生（一年级）</span>
-</div>
-
 <!-- 团队合照 -->
 <div style="margin-bottom: 1.5rem; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08);">
   <img 
@@ -640,6 +656,7 @@
     <div class="team-grid">
 
       <!-- PI -->
+      <div class="team-subheading">课题组负责人</div>
       <div class="member-card fade-up">
         <!--<div class="m-avatar" style="background:#E1F5EE; color:#0F6E56;">PI</div>-->
         <img
@@ -652,6 +669,7 @@
       </div>
 
       <!-- 博士生 -->
+      <div class="team-subheading">博士研究生</div>
       <div class="member-card fade-up delay-2">
         <a href="members/陈思佳.html" class="m-link" title="查看陈思佳的简介">
           <div class="m-avatar" style="background:#EEEDFE; color:#534AB7;">陈</div>
@@ -669,6 +687,7 @@
       </div>
 
       <!-- 硕士生 -->
+      <div class="team-subheading">硕士研究生</div>
       <div class="member-card fade-up delay-3">
         <a href="members/祁紫含.html" class="m-link" title="查看祁紫含的简介">
           <div class="m-avatar" style="background:#EAF3DE; color:#3B6D11;">祁</div>
@@ -733,6 +752,15 @@
 
       <!-- ✏️ 如需添加更多成员，复制上方 member-card 代码块 -->
 
+    </div>
+
+    <!-- 年级配色图例：同一个年级使用同一种颜色 -->
+    <div class="team-legend">
+      <span><i style="background:#EEEDFE;"></i>博士生（二年级）</span>
+      <span><i style="background:#FAECE7;"></i>博士生（一年级）</span>
+      <span><i style="background:#EAF3DE;"></i>硕士生（三年级）</span>
+      <span><i style="background:#E6F1FB;"></i>硕士生（二年级）</span>
+      <span><i style="background:#FAEEDA;"></i>硕士生（一年级）</span>
     </div>
   </div>
 </section>
@@ -806,6 +834,26 @@
           <div class="contact-label">实验室地址</div>
           <!-- ✏️ 修改地址 -->
           <div class="contact-value">滨文校区 20号楼 20209室</div>
+        </div>
+      </div>
+
+      <div class="contact-card fade-up delay-2">
+        <div class="contact-icon">RG</div>
+        <div>
+          <div class="contact-label">学术主页</div>
+          <div class="contact-value">
+            <a href="https://www.researchgate.net/profile/Jie-Yu-66" target="_blank" rel="noopener noreferrer">ResearchGate</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-card fade-up delay-2">
+        <div class="contact-icon">iD</div>
+        <div>
+          <div class="contact-label">学术标识</div>
+          <div class="contact-value">
+            <a href="https://orcid.org/0000-0002-6768-7236" target="_blank" rel="noopener noreferrer">ORCID</a>
+          </div>
         </div>
       </div>
 

@@ -141,6 +141,18 @@
       color: var(--teal-600);
       border: 1px solid var(--teal-100);
     }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+    .hero-action {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 38px; padding: 0 16px; border-radius: 20px;
+      border: 1px solid var(--teal-100); font-size: 15px; font-weight: 500;
+      transition: background 0.2s, color 0.2s, transform 0.2s;
+    }
+    .hero-action:hover { text-decoration: none; transform: translateY(-1px); }
+    .hero-action--primary { background: var(--teal-600); border-color: var(--teal-600); color: #fff; }
+    .hero-action--primary:hover { background: var(--teal-800); color: #fff; }
+    .hero-action--secondary { background: var(--bg-card); color: var(--teal-600); }
+    .hero-action--secondary:hover { background: var(--teal-50); }
 
     /* ---------- Sections ---------- */
     .section {
@@ -177,12 +189,12 @@
     }
     .r-card:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.06); }
     .r-card .r-icon {
-      width: 40px; height: 40px; border-radius: 8px;
+      width: 56px; height: 56px; border-radius: 12px;
       background: var(--teal-50);
       display: flex; align-items: center; justify-content: center;
       margin-bottom: 12px;
-      font-size: 22px;
     }
+    .r-card .r-icon img { width: 34px; height: 34px; }
     .r-card h3 { font-size: 18px; font-weight: 500; margin-bottom: 6px; }
     .r-card p { font-size: 16px; color: var(--ink-3); line-height: 1.7; }
 
@@ -220,6 +232,15 @@
       grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
       gap: 12px;
     }
+    .team-subheading {
+      grid-column: 1 / -1;
+      margin-top: 1.25rem;
+      color: var(--teal-600);
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+    }
+    .team-subheading:first-child { margin-top: 0; }
     .member-card {
       text-align: center;
       padding: 1.25rem 1rem;
@@ -380,7 +401,7 @@
 <body>
 
 <nav>
-  <div class="nav-logo">Yu Jie Research Group</div>
+  <div class="nav-logo" title="Yu Jie Research Group" aria-label="Yu Jie Research Group">Yu Lab</div>
   <ul class="nav-links">
     <li><a href="#home">Home</a></li>
     <li><a href="#research">Research</a></li>
@@ -435,6 +456,10 @@
           <span class="tag">Neuropharmacology of Chinese medicine</span>
           <span class="tag">Neuroelectrophysiology</span>
         </div>
+        <div class="hero-actions">
+          <a class="hero-action hero-action--primary" href="#news">Join the Lab</a>
+          <a class="hero-action hero-action--secondary" href="mailto:yujie@zcmu.edu.cn">Contact the Lab</a>
+        </div>
       </div>
 
     </div>
@@ -447,19 +472,19 @@
     <div class="research-grid">
 
       <div class="r-card fade-up delay-1">
-        <div class="r-icon">🔬</div>
+        <div class="r-icon"><img src="assets/icons/brain.svg" alt="" aria-hidden="true" /></div>
         <h3>Chronic Pain in Rheumatic Immune Diseases</h3>
         <p>Dissecting the heterogeneity and regulatory networks of immune cells underlying chronic pain in rheumatic immune diseases, and neuro-immune crosstalk mechanisms.</p>
       </div>
 
       <div class="r-card fade-up delay-2">
-        <div class="r-icon">🧬</div>
+        <div class="r-icon"><img src="assets/icons/leaf.svg" alt="" aria-hidden="true" /></div>
         <h3>Neuropharmacology of Chinese Medicine</h3>
         <p>Investigating the targeted mechanisms by which traditional Chinese medicine formulas and compounds regulate chronic pain.</p>
       </div>
 
       <div class="r-card fade-up delay-3">
-        <div class="r-icon">💊</div>
+        <div class="r-icon"><img src="assets/icons/activity.svg" alt="" aria-hidden="true" /></div>
         <h3>Neuroelectrophysiology</h3>
         <p>Application of patch-clamp electrophysiology to the study of neuro-immune mechanisms.</p>
       </div>
@@ -532,15 +557,6 @@
   <div class="container">
     <div class="section-label">Team Members</div>
 
-    <!-- Year color legend: the same color stands for the same year -->
-    <div class="team-legend">
-      <span><i style="background:#EEEDFE;"></i>PhD Candidates (Year 2)</span>
-      <span><i style="background:#FAECE7;"></i>PhD Candidate (Year 1)</span>
-      <span><i style="background:#EAF3DE;"></i>Master's Students (Year 3)</span>
-      <span><i style="background:#E6F1FB;"></i>Master's Students (Year 2)</span>
-      <span><i style="background:#FAEEDA;"></i>Master's Students (Year 1)</span>
-    </div>
-
     <!-- Team photo -->
     <div style="margin-bottom: 1.5rem; border-radius: 10px; overflow: hidden; border: 1px solid rgba(0,0,0,0.08);">
       <img
@@ -556,6 +572,7 @@
     <div class="team-grid">
 
       <!-- PI -->
+      <div class="team-subheading">Principal Investigator</div>
       <div class="member-card fade-up">
         <img
         src="avatars/于捷.jpg"
@@ -567,6 +584,7 @@
       </div>
 
       <!-- PhD candidates -->
+      <div class="team-subheading">Doctoral Students</div>
       <div class="member-card fade-up delay-2">
         <a href="members/陈思佳.html" class="m-link" title="Profile of 陈思佳">
           <div class="m-avatar" style="background:#EEEDFE; color:#534AB7;">陈</div>
@@ -584,6 +602,7 @@
       </div>
 
       <!-- Master's students -->
+      <div class="team-subheading">Master's Students</div>
       <div class="member-card fade-up delay-3">
         <a href="members/祁紫含.html" class="m-link" title="Profile of 祁紫含">
           <div class="m-avatar" style="background:#EAF3DE; color:#3B6D11;">祁</div>
@@ -640,6 +659,15 @@
         <p>Master's Student · Year 1</p>
       </div>
 
+    </div>
+
+    <!-- Year color legend: the same color stands for the same year -->
+    <div class="team-legend">
+      <span><i style="background:#EEEDFE;"></i>PhD Candidates (Year 2)</span>
+      <span><i style="background:#FAECE7;"></i>PhD Candidate (Year 1)</span>
+      <span><i style="background:#EAF3DE;"></i>Master's Students (Year 3)</span>
+      <span><i style="background:#E6F1FB;"></i>Master's Students (Year 2)</span>
+      <span><i style="background:#FAEEDA;"></i>Master's Students (Year 1)</span>
     </div>
   </div>
 </section>
@@ -699,6 +727,26 @@
         <div>
           <div class="contact-label">Lab Address</div>
           <div class="contact-value">Binwen Campus, Building 20, Room 20209</div>
+        </div>
+      </div>
+
+      <div class="contact-card fade-up delay-2">
+        <div class="contact-icon">RG</div>
+        <div>
+          <div class="contact-label">Academic Profile</div>
+          <div class="contact-value">
+            <a href="https://www.researchgate.net/profile/Jie-Yu-66" target="_blank" rel="noopener noreferrer">ResearchGate</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-card fade-up delay-2">
+        <div class="contact-icon">iD</div>
+        <div>
+          <div class="contact-label">Researcher Identifier</div>
+          <div class="contact-value">
+            <a href="https://orcid.org/0000-0002-6768-7236" target="_blank" rel="noopener noreferrer">ORCID</a>
+          </div>
         </div>
       </div>
 
