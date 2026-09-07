@@ -42,8 +42,9 @@
       --ink:      #1a1a1a;
       --ink-2:    #4a4a4a;
       --ink-3:    #888;
-      --border:   rgba(0,0,0,0.08);
-      --bg:       #fafaf8;
+      --border:   #E6EBEF;
+      --bg:       #FFFFFF;
+      --bg-section: #F7FAFC;
       --bg-card:  #ffffff;
       --radius:   10px;
       --serif:    'Noto Serif SC', serif;
@@ -66,7 +67,7 @@
     /* ---------- Navigation ---------- */
     nav {
       position: sticky; top: 0; z-index: 100;
-      background: rgba(250,250,248,0.92);
+      background: rgba(255,255,255,0.94);
       backdrop-filter: blur(10px);
       border-bottom: 2px solid var(--border);
       display: flex; align-items: center; justify-content: space-between;
@@ -159,6 +160,7 @@
       padding: 3rem 0 2.5rem;
       border-bottom: 1px solid var(--border);
     }
+    .section:nth-of-type(even) { background: var(--bg-section); }
     .section:last-of-type { border-bottom: none; }
     .section-label {
       font-size: 15px; font-weight: 500;
@@ -276,7 +278,7 @@
     .team-legend {
       display: flex; flex-wrap: wrap; gap: 6px 18px;
       font-size: 15px; color: var(--ink-3);
-      margin: -1rem 0 1.25rem;
+      margin: 1.75rem 0 0;
     }
     .team-legend i {
       display: inline-block; width: 12px; height: 12px;
@@ -458,7 +460,7 @@
         </div>
         <div class="hero-actions">
           <a class="hero-action hero-action--primary" href="#news">Join the Lab</a>
-          <a class="hero-action hero-action--secondary" href="mailto:yujie@zcmu.edu.cn">Contact the Lab</a>
+          <a class="hero-action hero-action--secondary" href="#contact">Contact the Lab</a>
         </div>
       </div>
 
@@ -564,7 +566,7 @@
         alt="Team photo"
         style="width: 100%; display: block; height: auto;"
       />
-      <div style="padding: 10px 14px; font-size: 13px; color: #888; background: #fafaf8;">
+        <div style="padding: 10px 14px; font-size: 13px; color: #888; background: #FFFFFF;">
         2026 Team Photo
       </div>
     </div>
