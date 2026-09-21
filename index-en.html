@@ -107,7 +107,7 @@
     .hero-inner {
       display: flex; gap: 2.5rem; align-items: flex-start;
     }
-    .avatar-wrap { flex-shrink: 0; }
+    .avatar-wrap { display: flex; flex-direction: column; align-items: center; width: 280px; flex-shrink: 0; }
     .avatar {
       width: 100px; height: 100px; border-radius: 50%;
       background: var(--teal-50);
@@ -154,6 +154,20 @@
     .hero-action--primary:hover { background: var(--teal-800); color: #fff; }
     .hero-action--secondary { background: var(--bg-card); color: var(--teal-600); }
     .hero-action--secondary:hover { background: var(--teal-50); }
+    .institution-strip {
+      display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
+      width: 100%; margin-top: 14px;
+    }
+    .institution-row { display: flex; align-items: center; justify-content: center; gap: 12px; }
+    .institution-item {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 84px; height: 84px; padding: 6px;
+      border-radius: 50%; background: var(--bg-card); border: 1px solid var(--border);
+    }
+    .institution-logo { width: 68px; height: 68px; object-fit: contain; }
+    .institution-logo--zju { width: 100px; height: 100px; }
+    .institution-item--rect { width: 190px; height: 52px; padding: 0; border: 0; border-radius: 0; background: transparent; }
+    .institution-logo--rect { width: 190px; height: 52px; }
 
     /* ---------- Sections ---------- */
     .section {
@@ -397,6 +411,14 @@
       .container { padding: 0 1.25rem; }
       .hero-inner { flex-direction: column; gap: 1.25rem; }
       #home { padding: 2.5rem 0 2rem; }
+      .avatar-wrap { width: 100%; }
+      .institution-strip { width: 280px; gap: 8px; }
+      .institution-row { gap: 10px; }
+      .institution-item { width: 76px; height: 76px; }
+      .institution-logo { width: 60px; height: 60px; }
+      .institution-logo--zju { width: 90px; height: 90px; }
+      .institution-item--rect { width: 180px; height: 49px; }
+      .institution-logo--rect { width: 180px; height: 49px; }
     }
   </style>
 </head>
@@ -421,6 +443,13 @@
 
       <div class="avatar-wrap">
         <img src="avatars/于捷-主页头像-裁切.jpg" alt="Yu Jie" style="width:260px;height:260px;border-radius:50%;object-fit:cover;border:2px solid #9FE1CB;" />
+        <div class="institution-strip" aria-label="Education and appointments">
+          <div class="institution-row">
+            <span class="institution-item" title="Zhejiang Chinese Medical University: Current appointment"><img class="institution-logo" src="assets/logos/zcmu.jpg" alt="Zhejiang Chinese Medical University emblem" /></span>
+            <span class="institution-item" title="Zhejiang University: PhD training"><img class="institution-logo institution-logo--zju" src="assets/logos/zju.png" alt="Zhejiang University emblem" /></span>
+          </div>
+          <span class="institution-item institution-item--rect" title="University of Arizona: Postdoctoral training"><img class="institution-logo institution-logo--rect" src="assets/logos/arizona-mark.jpg" alt="University of Arizona emblem" /></span>
+        </div>
       </div>
 
       <div class="hero-text">
